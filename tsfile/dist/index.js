@@ -1,11 +1,41 @@
 console.log("hello");
 const root = document.getElementById("root");
+class User {
+    id;
+    email;
+    name;
+    coursecount;
+    city;
+    constructor(id, email, name, coursecount) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.coursecount = coursecount;
+    }
+    getId() {
+        return this.id;
+    }
+    get getAppleEmail() {
+        return `apple${this.email}`;
+    }
+    get courseCount() {
+        if (this.coursecount) {
+            return this.coursecount;
+        }
+        throw new Error("Course count not set");
+    }
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course count should be more than 1");
+        }
+        this.coursecount = courseNum;
+    }
+}
+const kumar = new User(1, "kumar@2sdf8003", "kumar");
+kumar.courseCount = 10;
+kumar.city = "delhi";
 root
-    ? (() => {
-        root.style.display = "flex";
-        root.style.alignItems = "center";
-        root.style.justifyContent = "center";
-        root.innerHTML = "<h1>This is test</h1>";
-    })()
-    : console.log("No root element found");
-root ? root.innerHTML = "<h1 style='color:white'>this is test</h1>" : console.log("root not found");
+    ? (root.innerHTML = `<h1>${kumar.getId()}test</h1><br><h1>User is ${kumar.name}<br>Email is ${kumar.email}<br>City is ${kumar.city}</h1>
+  <br><p>${kumar.getAppleEmail}</p>
+  <br><p>${kumar.courseCount}</p>`)
+    : console.log("root not found");
