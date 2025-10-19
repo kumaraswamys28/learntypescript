@@ -1,0 +1,11 @@
+var user = { name: "hitesh" };
+console.log(user.name);
+var greeting = "hello";
+var m = 5;
+greeting.toLowerCase();
+console.log(greeting);
+var userid = 11.232;
+var islogged = false;
+userid.toFixed();
+console.log(userid);
+console.log(islogged);

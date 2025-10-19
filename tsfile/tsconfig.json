@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // 🗂️ File structure
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // ⚙️ Target environment
+    "target": "esnext",
+    "module": "none",
+    "sourceMap": false,
+    "alwaysStrict": false,
+
+    // 🧹 Clean output
+    "removeComments": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    // ✅ TypeScript strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // ⚡ Performance & compatibility
+    "skipLibCheck": true,
+
+    // 💡 React setup (optional)
+    "jsx": "react-jsx"
+  },
+
+  // 👇 Ensure it compiles only what you want
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
