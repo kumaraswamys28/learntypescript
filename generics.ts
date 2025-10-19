@@ -41,7 +41,7 @@ function tests<bottel>(val: bottel): bottel {
 class gymbottel implements bottel {
     constructor(
         public brand: string,
-        public type: number,
+        public type: number, 
     ) { }
 }
 
@@ -107,3 +107,9 @@ export {}
 //
 //  Golden takeaway: 
 // Generics = Flexibility + Type Safety + Reusability
+
+
+
+
+
+
