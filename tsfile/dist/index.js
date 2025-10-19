@@ -31,9 +31,15 @@ class User {
         this.coursecount = courseNum;
     }
 }
-const kumar = new User(1, "kumar@2sdf8003", "kumar");
-kumar.courseCount = 10;
+class subusr extends User {
+    isFamily = true;
+    changecoursecount(num) {
+        this.courseCount = num;
+    }
+}
+const kumar = new subusr(1, "kumar@2sdf8003", "kumar");
 kumar.city = "delhi";
+kumar.changecoursecount(10);
 root
     ? (root.innerHTML = `<h1>${kumar.getId()}test</h1><br><h1>User is ${kumar.name}<br>Email is ${kumar.email}<br>City is ${kumar.city}</h1>
   <br><p>${kumar.getAppleEmail}</p>

@@ -49,7 +49,7 @@ class User {
     return `apple${this.email}`;
   }
 
-  
+
   get courseCount(): number | never{
     if(this.coursecount){
     return this.coursecount;
@@ -67,10 +67,39 @@ class User {
 
 }
 
+
+
+class subusr extends User{
+    //child class can not inherit private variable so we use isFamily
+    isFamily:boolean=true;
+    changecoursecount(num:number){
+        this.courseCount=num;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Create an instance
-const kumar = new User(1, "kumar@2sdf8003", "kumar");
-kumar.courseCount=10;
+const kumar = new subusr(1, "kumar@2sdf8003", "kumar");
+// kumar.courseCount=10;
 kumar.city = "delhi"; // optional property can be added after creation
+kumar.changecoursecount(10);
 
 // Update DOM with user info if root exists
 root

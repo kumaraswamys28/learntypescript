@@ -37,7 +37,7 @@ class User {
         this.id = id;
         this.email = email;
         this.name = name;
-    }
+    }}
 
 class User{
     private city?:string
